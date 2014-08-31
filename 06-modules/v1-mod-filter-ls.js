@@ -1,7 +1,6 @@
 module.exports = function(dirname, file_extension, callback) {
 
     var fs = require('fs');
-    // var path = require('path');
     var extname = require('path').extname;
 
     fs.readdir(dirname, function(err, contents) {
