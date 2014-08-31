@@ -10,6 +10,10 @@
 
 var httpGet = require('http').get;
 
+//
+// `response` is a node Stream object. They emit events like
+// 'data', 'error' and 'end'.
+//
 httpGet(process.argv[2], function(response) {
 
     response.on('data', function(data) {
