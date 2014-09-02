@@ -1,13 +1,5 @@
 var net = require('net');
-
-function zeroPad(str, charToPad) {
-    // If str is not a string, try to make a string out of it.
-    if (typeof str !== 'string') {
-       str = String(str);
-    }
-
-    return (str.length === 1) ? (charToPad + str) : str;
-}
+var zeroPad = require('./v2-module-zero-pad.js');
 
 var serv = net.createServer(function(socket) {
 
